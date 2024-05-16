@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run copy-html && npm run minify-html",
+    "build": "npm run copy-html",
     "copy-html": "copyfiles index.html dist",
     "minify-html": "html-minifier --input-dir dist --output-dir dist --collapse-whitespace --remove-comments"
   },

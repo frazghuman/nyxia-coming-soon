@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run copy-assets && npm run minify-html",
-    "copy-assets": "copyfiles index.html dist",
+    "build": "npm run copy-html && npm run minify-html",
+    "copy-html": "copyfiles index.html dist",
     "minify-html": "html-minifier --input-dir dist --output-dir dist --collapse-whitespace --remove-comments"
   },
   "keywords": [],
@@ -16,4 +16,3 @@
     "html-minifier": "^4.0.0"
   }
 }
-

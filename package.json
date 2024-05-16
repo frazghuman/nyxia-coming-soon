@@ -2,10 +2,18 @@
   "name": "nyxia",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run copy-assets && npm run minify-html",
+    "copy-assets": "copyfiles index.html images/* dist",
+    "minify-html": "html-minifier --input-dir dist --output-dir dist --collapse-whitespace --remove-comments"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "html-minifier": "^4.0.0"
+  }
 }
+
